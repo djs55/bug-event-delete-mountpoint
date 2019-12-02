@@ -7,5 +7,5 @@ services:
     image: alpine
     command: tail -f /dev/null
     volumes:
-      - /Users/djs/bugs/mounts2/webapp:/webapp:consistent
+      - COMPOSEDIR/webapp:/webapp:consistent
       - node_modules:/webapp/node_modules/
