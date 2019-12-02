@@ -1,0 +1,11 @@
+version: "3.7"
+
+volumes:
+  node_modules:
+services:
+  webapp:
+    image: alpine
+    command: tail -f /dev/null
+    volumes:
+      - /Users/djs/bugs/mounts2/webapp:/webapp:consistent
+      - node_modules:/webapp/node_modules/
