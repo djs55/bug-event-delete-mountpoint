@@ -4,8 +4,7 @@ volumes:
   node_modules:
 services:
   webapp:
-    image: alpine
-    command: tail -f /dev/null
+    build: webapp
     volumes:
       - COMPOSEDIR/webapp:/webapp:consistent
       - node_modules:/webapp/node_modules/

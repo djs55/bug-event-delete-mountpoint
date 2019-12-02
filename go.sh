@@ -16,8 +16,9 @@ function finish {
 trap finish EXIT
 
 # Starting application
+docker-compose build
 docker-compose up -d
-sleep 1s # just in case
+sleep 5s # time to settle
 
 echo The container should have a populated /webapp/node_modules directory:
 docker exec compose_webapp_1 ls -lsa /webapp/node_modules 
